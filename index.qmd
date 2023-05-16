@@ -1,0 +1,4 @@
+---
+title: "Computational Foundations for Policy Analysis: Programming and Reproducible Methods"
+tbl-colwidths: [5,10,30,5,5,5,5,5,5,5]
+---
