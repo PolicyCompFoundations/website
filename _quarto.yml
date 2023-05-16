@@ -14,7 +14,6 @@ website:
 
 
   page-footer:
-    right: "This page is built with ❤️ and [Quarto](https://quarto.org/)."
     left: "&copy; Copyright 2023, Jacob Jameson"
     background: "#e6e6fa"
 
