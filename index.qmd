@@ -1,8 +1,16 @@
 ---
 title: "Computational Foundations for Policy Analysis: Programming and Reproducible Methods"
-tbl-colwidths: [5,10,30,5,5,5,5,5,5,5]
+tbl-colwidths: [5,10,30]
 ---
 
+This page contains an outline of the topics, content, and assignments for the semester. Note that this schedule will be updated as the semester progresses, with all changes documented here.
+
+|  Lesson | Topic  | Description  |
+|:------:|--------|--------|
+|  [1](/lessons/git_github.html)  | Git/GitHub  | We will cover Git and GitHub basics from the command line, branching, merging, and forking |
+|  | | |
+|  | | |
+|  | | |
 
 <div class="vines-container">
 <div class="flower"></div>
