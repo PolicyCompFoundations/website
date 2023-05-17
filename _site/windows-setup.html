@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.0.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Policy Comp Foundations - Windows Setup</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./mac-setup.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<meta property="og:title" content="Policy Comp Foundations - Windows Setup">
+<meta property="og:description" content="In order to write code locally on our computer and be able to push to GitHub (or pull from GitHub) daily without constantly having to enter a username and password each time, we’re going to set up…">
+<meta property="og:site-name" content="Policy Comp Foundations">
+</head>
+
+<body class="nav-sidebar docked">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title">Windows Setup</h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-center sidebar-header">
+      <a href="./" class="sidebar-logo-link">
+      <img src="./assets/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+      <div class="sidebar-tools-main">
+    <a href="https://github.com/PolicyCompFoundations" title="GitHub organization" class="sidebar-tool px-1"><i class="bi bi-github"></i></a>
+</div>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">Course information</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./course-overview.qmd" class="sidebar-item-text sidebar-link">Overview</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./course-syllabus.qmd" class="sidebar-item-text sidebar-link">Syllabus</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">Setting Up</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./mac-setup.html" class="sidebar-item-text sidebar-link">Mac OS Setup</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./windows-setup.html" class="sidebar-item-text sidebar-link active">Windows Setup</a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#part-i-getting-started" id="toc-part-i-getting-started" class="nav-link active" data-scroll-target="#part-i-getting-started">Part I: Getting Started</a></li>
+  <li><a href="#part-ii-shell" id="toc-part-ii-shell" class="nav-link" data-scroll-target="#part-ii-shell">Part II: Shell</a></li>
+  <li><a href="#part-iii-git-setup" id="toc-part-iii-git-setup" class="nav-link" data-scroll-target="#part-iii-git-setup">Part III: Git Setup</a></li>
+  <li><a href="#part-iv-ssh" id="toc-part-iv-ssh" class="nav-link" data-scroll-target="#part-iv-ssh">Part IV: SSH</a></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/PolicyCompFoundations/website/edit/main/windows-setup.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/PolicyCompFoundations/website/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">Windows Setup</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    
+  </div>
+  
+
+</header>
+
+<section id="part-i-getting-started" class="level3">
+<h3 class="anchored" data-anchor-id="part-i-getting-started">Part I: Getting Started</h3>
+<ol type="1">
+<li><p>Update your computer to at least Windows 10, version 2004. (Version 1903 may work but 2004 is ideal.)</p>
+<ul>
+<li>Use <code>winver</code> to check the current version.</li>
+<li>https://en.wikipedia.org/wiki/Windows_10_version_history</li>
+</ul></li>
+<li><p>Install <a href="https://www.sublimetext.com/3">Sublime Text 3</a>.</p>
+<ul>
+<li>Pin Sublime Text to taskbar.</li>
+<li>Disable Hot Exit.</li>
+</ul></li>
+<li><p>Install <a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10#manual-installation-steps">Windows Subsystem for Linux (WSL 1)</a>.</p></li>
+<li><p>Restart.</p></li>
+<li><p>Install <a href="https://www.microsoft.com/store/apps/9nblggh4msv6">Ubuntu</a> from the Microsoft Store.</p>
+<ul>
+<li>Setup user/pass.</li>
+<li>Create shortcut to WSL home folder on desktop.</li>
+</ul></li>
+<li><p>Install <a href="https://aka.ms/terminal">Windows Terminal</a> from the Microsoft Store.</p>
+<ul>
+<li>Pin Windows Terminal to taskbar.</li>
+<li>Change <code>defaultProfile</code> to WSL.</li>
+<li>Set <code>"startingDirectory":"\\\\wsl$\\Ubuntu\\home\\[USERNAME]"</code>.</li>
+</ul></li>
+<li><p>Install <a href="https://github.com/4U6U57/wsl-open">wsl-open</a>.</p>
+<pre><code># Make a bin folder in your home directory
+mkdir ~/bin
+
+# Add the bin folder to your PATH in your bashrc
+echo '[[ -e ~/bin ]] &amp;&amp; PATH=$PATH:~/bin' &gt;&gt; .bashrc
+
+# Download the script to a file named 'wsl-open'
+curl -o ~/bin/open https://raw.githubusercontent.com/4U6U57/wsl-open/master/wsl-open.sh
+
+# Mark file as safe to run
+chmod +x ~/bin/open</code></pre></li>
+<li><p>Install <a href="https://github.com/AlJohri/wsl-subl"><code>wsl-subl</code></a>.</p>
+<pre><code># Download the script to a file named 'wsl-subl'
+curl -o ~/bin/subl https://raw.githubusercontent.com/AlJohri/wsl-subl/master/wsl-subl.sh
+
+# Mark file as safe to run
+chmod +x ~/bin/subl</code></pre></li>
+</ol>
+</section>
+<section id="part-ii-shell" class="level3">
+<h3 class="anchored" data-anchor-id="part-ii-shell">Part II: Shell</h3>
+<ol type="1">
+<li><p>Run <code>subl ~/.bashrc</code> to open the bash profile in Sublime Text.</p></li>
+<li><p>Paste the following snippet at the <strong>end of the file</strong> and save.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># set EDITOR as sublime text</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">EDITOR</span><span class="op">=</span><span class="st">"subl --wait"</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Define a function that returns your current git branch</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">parse_git_branch()</span> <span class="kw">{</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a> <span class="fu">git</span> branch <span class="dv">2</span><span class="op">&gt;</span> /dev/null <span class="kw">|</span> <span class="fu">sed</span> <span class="at">-e</span> <span class="st">'/^[^*]/d'</span> <span class="at">-e</span> <span class="st">'s/* \(.*\)/ (\1)/'</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="kw">}</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Display present working directory and git path in bash prompt with colors</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">PS1</span><span class="op">=</span><span class="st">"\u \[\033[32m\]\w\[\033[33m\]</span><span class="dt">\$</span><span class="st">(parse_git_branch)\[\033[00m\] $ "</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>Close and reopen the terminal to see the changes.</p></li>
+</ol>
+</section>
+<section id="part-iii-git-setup" class="level3">
+<h3 class="anchored" data-anchor-id="part-iii-git-setup">Part III: Git Setup</h3>
+<ol type="1">
+<li><p>Configure <code>git</code> with your name and email address. Be sure to use the same email associated with your Github account.</p>
+<pre><code>git config --global user.name "YOUR NAME"
+git config --global user.email "YOUR EMAIL ADDRESS"</code></pre></li>
+</ol>
+</section>
+<section id="part-iv-ssh" class="level3">
+<h3 class="anchored" data-anchor-id="part-iv-ssh">Part IV: SSH</h3>
+<p>In order to write code locally on our computer and be able to push to GitHub (or pull from GitHub) daily without constantly having to enter a username and password each time, we’re going to set up <strong>SSH keys</strong>.</p>
+<blockquote class="blockquote">
+<p>SSH keys come in pairs, a public key that gets shared with services like GitHub, and a private key that is stored only on your computer. If the keys match, you’re granted access.</p>
+<p>The cryptography behind SSH keys ensures that no one can reverse engineer your private key from the public one.</p>
+<p>source: https://jdblischak.github.io/2014-09-18-chicago/novice/git/05-sshkeys.html</p>
+</blockquote>
+<p>The following steps are a simplification of the steps found in <a href="https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/connecting-to-github-with-ssh">GitHub’s documentation</a>. If you prefer, feel free to follow the steps at that link. Otherwise, for a simplified experience continue on below!</p>
+<section id="simplified-setup-steps" class="level4">
+<h4 class="anchored" data-anchor-id="simplified-setup-steps">Simplified Setup Steps</h4>
+<ol type="1">
+<li><p><strong>Step 1:</strong> Check to see if you already have keys.</p>
+<p>Run the following command.</p>
+<pre><code>ls -al ~/.ssh/</code></pre>
+<p>If you see any output, that probably means you already have a public and private SSH key. If you have keys, you will most likely you will have two files, one named <code>id_rsa</code> (that contains your private key) and <code>id_rsa.pub</code> (that contains your public key).</p>
+<p><em><strong>sidenote</strong>: Those files may also be named something like: <code>id_ecdsa.pub</code> or <code>id_ed25519.pub</code>. That just means you’re using a different encryption algorithm to generate your keys. You can learn <a href="https://medium.com/risan/upgrade-your-ssh-key-to-ed25519-c6e8d60d3c54">more about that here</a> if you chose to. Or, don’t worry about it and power on!</em></p>
+<p>If you already have keys, continue to step 3. Otherwise, read on!</p></li>
+<li><p><strong>Step 2:</strong> Create new SSH keys.</p>
+<p>Run the following comamnd, but makes sure to replace <code>your_email@example.com</code> with your own email address. Use the same email address you used to sign up to GitHub with.</p>
+<pre><code>ssh-keygen -t rsa -b 4096 -C "your_email@example.com"</code></pre>
+<p>You may then see a prompt like the one below. Just hit enter to save the key in the default location.</p>
+<pre><code>Enter file in which to save the key (/Users/jacob/.ssh/id_rsa):</code></pre>
+<p>After that, the system will prompt you to enter a passphrase. We’re <strong>not</strong> going to use a passphrase here, so just go ahead and leave that blank and hit enter twice.</p>
+<pre><code>Enter passphrase (empty for no passphrase):
+Enter same passphrase again:</code></pre>
+<p>Finally you should see some randomart that looks like this</p>
+<pre><code>Your identification has been saved in /Users/jacob/.ssh/id_rsa.
+Your public key has been saved in /Users/jacob/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:2AazdvCBP8d1li9tF8cszM2KbtjPe7iwfCK8gUgzIGY your_email@example.com
+The key's randomart image is:
++---[RSA 4096]----+
+|                 |
+|       .     o * |
+|  E . = .   . B.*|
+| o . . X o . + =o|
+|      B S o . o =|
+|     o * + +   o.|
+|      . ..o =  . |
+|          o+.=o .|
+|          .ooo=+ |
++----[SHA256]-----+</code></pre></li>
+<li><p><strong>Step 3:</strong> Add your key to GitHub</p>
+<p>Run the following command to view your public key</p>
+<pre><code>cat ~/.ssh/id_rsa.pub</code></pre>
+<p>Navigate to https://github.com/settings/keys and hit “New SSH key”. Paste the SSH key from the last command into the text box as shown below and then hit “Add SSH key”. Make sure you copy paste exactly. The key will likely start with ssh_rsa and end with your email address. You can give the key a title like “My Macbook Pro” so you know which computer this key comes from.</p>
+<p><img src="assets/sshkey.png" class="img-fluid"></p></li>
+<li><p><strong>Step 4:</strong> Verify that it worked!</p>
+<p>Run the following command to test your computer’s SSH connection to GitHub</p>
+<pre><code>ssh -T git@github.com</code></pre>
+<p>If the connection is successful, you will see a message like this</p>
+<pre><code>&gt; Hi username! You've successfully authenticated, but GitHub does not
+&gt; provide shell access.</code></pre></li>
+</ol>
+</section>
+<section id="recap-what-did-we-just-do" class="level4">
+<h4 class="anchored" data-anchor-id="recap-what-did-we-just-do">Recap: What did we just do?</h4>
+<p>We just created a public/private SSH Key pair. There is now a folder on your computer called <code>.ssh</code> <em>(it is a hidden folder, hidden folders have names that start with <code>.</code>)</em>. You can run this command to see the files in that folder.</p>
+<pre><code>ls -al ~/.ssh/</code></pre>
+<p><code>id_rsa.pub</code> contains your <strong>public key</strong>, you can see what that looks like by running:</p>
+<pre><code>cat ~/.ssh/id_rsa.pub</code></pre>
+<p><code>id_rsa</code> contains your <strong>private key</strong>, you can see what that looks like by running:</p>
+<pre><code>cat ~/.ssh/id_rsa</code></pre>
+<p>This public and private key pair are mathematically linked. As the name suggests, you can share your <strong>public key</strong> far and wide, but must keep your <strong>private key</strong> safe and secure. Since you have shared your public key with GitHub, your computer can encrypt files with your private key and send them to GitHub. Since GitHub has your public key, it can match that file and verify that it is coming from you. Your computer can now securely communicate with GitHub without needing a username and password every time.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./mac-setup.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Mac OS Setup</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">© Copyright 2023, Jacob Jameson &amp; Madison Coots</div>   
+  </div>
+</footer>
+
+
+
+</body></html>

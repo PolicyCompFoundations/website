@@ -2,6 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://PolicyCompFoundations.github.io/website/index.html</loc>
-    <lastmod>2023-05-16T16:18:08.711Z</lastmod>
+    <lastmod>2023-05-17T01:31:39.740Z</lastmod>
+  </url>
+  <url>
+    <loc>https://PolicyCompFoundations.github.io/website/mac-setup.html</loc>
+    <lastmod>2023-05-16T20:59:48.816Z</lastmod>
+  </url>
+  <url>
+    <loc>https://PolicyCompFoundations.github.io/website/windows-setup.html</loc>
+    <lastmod>2023-05-16T21:04:31.481Z</lastmod>
+  </url>
+  <url>
+    <loc>https://PolicyCompFoundations.github.io/website/setup/mac-setup.html</loc>
+    <lastmod>2023-05-17T01:31:37.436Z</lastmod>
+  </url>
+  <url>
+    <loc>https://PolicyCompFoundations.github.io/website/setup/windows-setup.html</loc>
+    <lastmod>2023-05-17T01:31:38.105Z</lastmod>
   </url>
 </urlset>

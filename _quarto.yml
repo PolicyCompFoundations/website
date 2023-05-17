@@ -14,7 +14,7 @@ website:
 
 
   page-footer:
-    left: "&copy; Copyright 2023, Jacob Jameson"
+    left: "&copy; Copyright 2023, Jacob Jameson & Madison Coots"
     background: "#e6e6fa"
 
   sidebar:
@@ -37,12 +37,17 @@ website:
             text: Overview
           - href: course-syllabus.qmd
             text: Syllabus
+      - section: "Setting Up"
+        contents:
+          - href: setup/mac-setup.qmd
+            text: Mac OS Setup
+          - href: setup/windows-setup.qmd
+            text: Windows Setup
 
 format:
   html:
     theme:
       light: [cosmo, theme.scss]
-      dark: [cosmo, theme-dark.scss]
     mainfont: "Atkinson Hyperlegible"
     code-copy: true
     code-overflow: wrap
