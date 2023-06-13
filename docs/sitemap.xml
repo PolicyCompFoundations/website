@@ -2,14 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://PolicyCompFoundations.github.io/website/index.html</loc>
-    <lastmod>2023-05-17T19:36:34.803Z</lastmod>
+    <lastmod>2023-06-13T13:35:06.143Z</lastmod>
   </url>
   <url>
     <loc>https://PolicyCompFoundations.github.io/website/setup/mac-setup.html</loc>
-    <lastmod>2023-05-17T17:52:03.538Z</lastmod>
+    <lastmod>2023-06-13T13:11:49.158Z</lastmod>
   </url>
   <url>
     <loc>https://PolicyCompFoundations.github.io/website/setup/windows-setup.html</loc>
     <lastmod>2023-05-17T17:52:04.135Z</lastmod>
+  </url>
+  <url>
+    <loc>https://PolicyCompFoundations.github.io/website/lessons/git_github/git_github.html</loc>
+    <lastmod>2023-06-13T13:13:48.427Z</lastmod>
+  </url>
+  <url>
+    <loc>https://PolicyCompFoundations.github.io/website/lessons/git_github/git_github.2.html</loc>
+    <lastmod>2023-06-13T13:35:03.891Z</lastmod>
+  </url>
+  <url>
+    <loc>https://PolicyCompFoundations.github.io/website/lessons/git_github/git_github.1.html</loc>
+    <lastmod>2023-06-13T13:35:09.187Z</lastmod>
+  </url>
+  <url>
+    <loc>https://PolicyCompFoundations.github.io/website/lessons/git_github/git_github.3.html</loc>
+    <lastmod>2023-06-13T13:35:04.615Z</lastmod>
   </url>
 </urlset>

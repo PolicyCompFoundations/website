@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.0.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Policy Comp Foundations - Git and GitHub</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<meta property="og:title" content="Policy Comp Foundations - Git and GitHub">
+<meta property="og:description" content="Now let’s learn how to use Git locally from our computer.">
+<meta property="og:site-name" content="Policy Comp Foundations">
+</head>
+
+<body class="nav-sidebar docked">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title">Git and GitHub</h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-center sidebar-header">
+      <a href="../../" class="sidebar-logo-link">
+      <img src="../../assets/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+      <div class="sidebar-tools-main">
+    <a href="https://github.com/PolicyCompFoundations" title="GitHub organization" class="sidebar-tool px-1"><i class="bi bi-github"></i></a>
+</div>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">Course information</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../course-overview.qmd" class="sidebar-item-text sidebar-link">Overview</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../course-syllabus.qmd" class="sidebar-item-text sidebar-link">Syllabus</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">Setting Up</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../setup/mac-setup.html" class="sidebar-item-text sidebar-link">Mac OS Setup</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../setup/windows-setup.html" class="sidebar-item-text sidebar-link">Windows Setup</a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#using-git-locally" id="toc-using-git-locally" class="nav-link active" data-scroll-target="#using-git-locally">Using Git Locally</a>
+  <ul class="collapse">
+  <li><a href="#some-vocabulary" id="toc-some-vocabulary" class="nav-link" data-scroll-target="#some-vocabulary">Some Vocabulary</a></li>
+  <li><a href="#components-of-a-git-repository" id="toc-components-of-a-git-repository" class="nav-link" data-scroll-target="#components-of-a-git-repository">Components of a Git Repository</a></li>
+  <li><a href="#pushing-to-github" id="toc-pushing-to-github" class="nav-link" data-scroll-target="#pushing-to-github">Pushing to GitHub</a>
+  <ul class="collapse">
+  <li><a href="#key-terms" id="toc-key-terms" class="nav-link" data-scroll-target="#key-terms">Key Terms</a></li>
+  </ul></li>
+  <li><a href="#example-simple-website" id="toc-example-simple-website" class="nav-link" data-scroll-target="#example-simple-website">❇️ Example: simple-website</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/PolicyCompFoundations/website/edit/main/lessons/git_github/git_github.3.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/PolicyCompFoundations/website/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">Git and GitHub</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    
+  </div>
+  
+
+</header>
+
+<section id="using-git-locally" class="level1">
+<h1>Using Git Locally</h1>
+<p>Now let’s learn how to use Git locally from our computer. While there are GUIs (graphical user interfaces) for Git on your computer like GitHub Desktop, we’re going to use the command line to learn Git. That’s because this is a key transferrable skill that applies to any kind of coding.</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="">
+Learning objective: Build a “mental model” of what your computer is doing.</li>
+</ul>
+<section id="some-vocabulary" class="level2">
+<h2 class="anchored" data-anchor-id="some-vocabulary">Some Vocabulary</h2>
+<ul>
+<li><strong>Git</strong> - version control software</li>
+<li><strong>Repository</strong> - a folder containing your files and also containing a structure that helps keep track of changes in those files. When you intialize a repository, git creates a hidden folder (<code>.git</code> folder) that stores the changes to those files.</li>
+<li><strong>GitHub</strong> - a place to host git repositories and collaborate</li>
+<li><strong>Local Repository</strong> - the version of a git repository on your local computer</li>
+<li><strong>Remote Repository</strong> - the version of a git repository stored somewhere else that your local repository is connected to (frequently on GitHub)</li>
+<li><strong>Commit</strong> - the basic unit of a git repository is a commit. It is a set of changes to a file. A commit usually comes with an id as well as a <strong>commit message</strong> that describes the change.</li>
+</ul>
+<p>Within a Repository you have</p>
+<ul>
+<li><strong>Untracked Changes</strong> - files that are in your folder but that git doesn’t pay attention to.</li>
+<li><strong>Staging Area</strong> - a place where you can put files before you commit them. Once files are in the staging area, git is paying attention to them.</li>
+<li><strong>Commit Log</strong> (aka Git History) - all of the commits (previous changes) to all of the files in your repository.</li>
+</ul>
+</section>
+<section id="components-of-a-git-repository" class="level2">
+<h2 class="anchored" data-anchor-id="components-of-a-git-repository">Components of a Git Repository</h2>
+<p><img src="https://www.evernote.com/shard/s150/sh/3a1357b6-6250-432c-b5be-6bc0a895b97f/0a90b7cfc659e426/res/930e27c8-7194-484b-84f5-d411e15c2bc5/skitch.jpg?resizeSmall&amp;width=832" class="img-fluid"></p>
+<ol type="1">
+<li>The working directory</li>
+</ol>
+<ul>
+<li><code>git init</code> creates a git repo inside current working directory. This means that this command can turn a regular folder into a git repository by generating a hidden <code>.git</code> folder that starts to keep track of changes.</li>
+<li><code>git clone</code> takes a git repo from somewhere else and makes a copy of that repo into your current working directory. We will frequently be cloning repos from GitHub.</li>
+</ul>
+<ol start="2" type="1">
+<li>The staging area</li>
+</ol>
+<ul>
+<li><code>git add .</code> adds changes from the working directory to the staging area</li>
+<li><code>git add &lt;filename&gt;</code> adds changes to filenames specified from the working directory to the staging area</li>
+</ul>
+<ol start="3" type="1">
+<li>The commit</li>
+</ol>
+<ul>
+<li><code>git commit -m "commit message"</code> adds changes in staging area to the repository</li>
+<li><code>git log</code> shows</li>
+</ul>
+<p><strong>Protip</strong>: Run <code>git status</code> after each command in the beginning because it allows you to visualize what just happaned.</p>
+</section>
+<section id="pushing-to-github" class="level2">
+<h2 class="anchored" data-anchor-id="pushing-to-github">Pushing to GitHub</h2>
+<section id="key-terms" class="level3">
+<h3 class="anchored" data-anchor-id="key-terms">Key Terms</h3>
+<ul>
+<li><strong>github</strong> - a service that hosts git remote repositories, and provides a web app to interact / collaborate on them</li>
+<li><strong>remote</strong> - another repository that can be syncronized with a remote</li>
+<li><strong>upstream</strong> - the name for a remote read-only repository</li>
+<li><strong>origin</strong> - the name for a remote read-and-write repository</li>
+<li><strong>clone</strong> - download an entire remote repository, to be used as a local repository</li>
+<li><strong>fetch</strong> - downloading the set of changes (commits) from a remote repository</li>
+<li><strong>pull</strong> - fetching changes and merging them into the current branch</li>
+</ul>
+<ol type="1">
+<li>In order to show your remotes, you can run <code>git remote -v show</code>. The default remote is named “origin”</li>
+<li>In order to push, you run <code>git push</code>. By default this will push from the branch you are on to a remote branch with the same name. (If you’d like to specify a branch, you can do that. The full formulation of this command is <code>git push &lt;remote&gt; &lt;branch&gt;</code>. So, for example you might say <code>git push origin main</code> to push to the “main” branch of the “origin” remote.)</li>
+</ol>
+</section>
+</section>
+<section id="example-simple-website" class="level2">
+<h2 class="anchored" data-anchor-id="example-simple-website">❇️ Example: simple-website</h2>
+<p>Let’s give it a try! We’re going to <strong>clone</strong> a repository for a simple R script from GitHub down to our computer where we can work with it <strong>locally</strong>. We will make some edits to the code, <strong>commit</strong> those changes and then <strong>push</strong> the changes back up to the <strong>remote</strong> repository in GitHub.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://github.com/PolicyCompFoundations/simple-rscript.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">https://github.com/PolicyCompFoundations/simple-rscript</figcaption><p></p>
+</figure>
+</div>
+<p><a href="../../lessons/git_github/git_github.4.html">Next Page (Git from the Command Line)</a></p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">© Copyright 2023, Jacob Jameson &amp; Madison Coots</div>   
+  </div>
+</footer>
+
+
+
+</body></html>

@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.0.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Policy Comp Foundations - Git and GitHub</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<meta property="og:title" content="Policy Comp Foundations - Git and GitHub">
+<meta property="og:description" content="GitHub is a place for:">
+<meta property="og:site-name" content="Policy Comp Foundations">
+</head>
+
+<body class="nav-sidebar docked">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title">Git and GitHub</h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-center sidebar-header">
+      <a href="../../" class="sidebar-logo-link">
+      <img src="../../assets/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+      <div class="sidebar-tools-main">
+    <a href="https://github.com/PolicyCompFoundations" title="GitHub organization" class="sidebar-tool px-1"><i class="bi bi-github"></i></a>
+</div>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">Course information</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../course-overview.qmd" class="sidebar-item-text sidebar-link">Overview</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../course-syllabus.qmd" class="sidebar-item-text sidebar-link">Syllabus</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">Setting Up</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../setup/mac-setup.html" class="sidebar-item-text sidebar-link">Mac OS Setup</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../setup/windows-setup.html" class="sidebar-item-text sidebar-link">Windows Setup</a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#github-introduction" id="toc-github-introduction" class="nav-link active" data-scroll-target="#github-introduction">GitHub Introduction</a>
+  <ul class="collapse">
+  <li><a href="#lets-dive-in" id="toc-lets-dive-in" class="nav-link" data-scroll-target="#lets-dive-in">Lets Dive In!</a></li>
+  <li><a href="#some-of-githubs-features" id="toc-some-of-githubs-features" class="nav-link" data-scroll-target="#some-of-githubs-features">(Some of) GitHub’s Features</a>
+  <ul class="collapse">
+  <li><a href="#the-readme.md-file" id="toc-the-readme.md-file" class="nav-link" data-scroll-target="#the-readme.md-file">The <code>README.md</code> file</a></li>
+  <li><a href="#commit-log" id="toc-commit-log" class="nav-link" data-scroll-target="#commit-log">Commit Log</a></li>
+  <li><a href="#history-raw-and-blame-for-any-file" id="toc-history-raw-and-blame-for-any-file" class="nav-link" data-scroll-target="#history-raw-and-blame-for-any-file">History, Raw, and Blame for any file</a></li>
+  <li><a href="#branches" id="toc-branches" class="nav-link" data-scroll-target="#branches">Branches</a></li>
+  <li><a href="#pull-requests" id="toc-pull-requests" class="nav-link" data-scroll-target="#pull-requests">Pull Requests</a></li>
+  <li><a href="#proposing-edits" id="toc-proposing-edits" class="nav-link" data-scroll-target="#proposing-edits">Proposing Edits</a></li>
+  <li><a href="#drag-and-drop" id="toc-drag-and-drop" class="nav-link" data-scroll-target="#drag-and-drop">Drag and Drop</a></li>
+  <li><a href="#collaboration" id="toc-collaboration" class="nav-link" data-scroll-target="#collaboration">Collaboration</a></li>
+  <li><a href="#serving-up-websites" id="toc-serving-up-websites" class="nav-link" data-scroll-target="#serving-up-websites">Serving up Websites!</a></li>
+  </ul></li>
+  <li><a href="#github-for-things-other-than-code" id="toc-github-for-things-other-than-code" class="nav-link" data-scroll-target="#github-for-things-other-than-code">GitHub for things other than code</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/PolicyCompFoundations/website/edit/main/lessons/git_github/git_github.2.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/PolicyCompFoundations/website/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">Git and GitHub</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    
+  </div>
+  
+
+</header>
+
+<section id="github-introduction" class="level1">
+<h1>GitHub Introduction</h1>
+<p>GitHub is a place for:</p>
+<ol type="1">
+<li><strong>Storing and viewing your Git repositories</strong></li>
+<li><strong>Collaborating on coding projects within an organization</strong></li>
+<li><strong>Open Source Collboration</strong>: People in other organizations or complete strangers can see your code and <a href="https://github.com/fivethirtyeight/actblue-analysis">participate with you on your project</a>. They can suggest fixes, point out errors, and start discussions. You can find other people’s work, and make sure you’re not duplicating something that already exists. Or you can interact with someone who has already worked on something similar to what you’re trying to tackle.</li>
+<li><strong>Web Hosting</strong>: The “Github Pages” feature allows you to host a static website for free, right on GitHub.</li>
+</ol>
+<p>Other Uses</p>
+<ul>
+<li>A place to store code</li>
+<li>A place to <a href="https://github.com/fivethirtyeight/data">store data</a></li>
+<li>A place for <a href="https://github.com/fivethirtyeight/data/issues?q=is%3Aissue+is%3Aclosed+sort%3Acomments-desc">discussion</a> about data and code</li>
+<li>A place for <a href="https://github.com/fivethirtyeight/data/pulls?q=is%3Apr+is%3Aclosed+sort%3Acomments-desc">open source</a> <a href="https://github.com/tj/git-extras/pull/356">collaboration</a> on projects</li>
+<li>A place for <a href="https://github.com/fivethirtyeight/world-cup/graphs/contributors">collaboration</a> <a href="https://github.com/fivethirtyeight/letsgo/pull/46">within</a> an organization</li>
+<li>A place to find people working on the same things you are</li>
+<li>A place to find sources / people with expertise in a particular dataset</li>
+<li>A place to find other digital tools (<a href="https://github.com/search?q=basketball+reference&amp;type=Repositories&amp;utf8=%E2%9C%93">scrapers</a>, <a href="https://github.com/search?utf8=%E2%9C%93&amp;q=spss+por+to+csv&amp;type=">file converters</a>, etc) <!-- Search "spss por to csv"--></li>
+<li>A place to find open source work and analysis</li>
+<li>A <a href="https://github.com/dmil">portfolio</a> of your technical work (or technical learning)</li>
+</ul>
+<section id="lets-dive-in" class="level2">
+<h2 class="anchored" data-anchor-id="lets-dive-in">Lets Dive In!</h2>
+<p>Vocab</p>
+<ul>
+<li><strong>local repository</strong> a folder stored on your computer</li>
+<li><strong>remote repository</strong> a folder stored on on GitHub</li>
+</ul>
+<p>Lets take a look at a repository that is on GitHub.</p>
+<ul>
+<li>https://github.com/code4policy/simple-website</li>
+</ul>
+</section>
+<section id="some-of-githubs-features" class="level2">
+<h2 class="anchored" data-anchor-id="some-of-githubs-features">(Some of) GitHub’s Features</h2>
+<section id="the-readme.md-file" class="level3">
+<h3 class="anchored" data-anchor-id="the-readme.md-file">The <code>README.md</code> file</h3>
+<p>Github looks for a “readme” file and renders it as you’re navigating through the file structure. This is a great way to guide people through your code.</p>
+<p><img src="images/screenshot_25.jpg" class="img-fluid"></p>
+<p>Readme files are often given the <code>.md</code> extension, meaning they’re written in a language called markdown that allows for nicer formatting. You can check out this <a href="https://www.markdownguide.org/cheat-sheet/">markdown cheet sheet</a> (https://www.markdownguide.org/cheat-sheet/) if you want to see how formatting works, but you can also save a readme files as plain text. Github will also detect <code>.txt</code> files, or you can just write plain text inside your <code>.md</code> file.</p>
+</section>
+<section id="commit-log" class="level3">
+<h3 class="anchored" data-anchor-id="commit-log">Commit Log</h3>
+<p><img src="images/commit-log-link.png" class="img-fluid"></p>
+<p>Vocab</p>
+<ul>
+<li><p><strong>commit</strong> - the basic unit of a git repository is a commit. It is a set of changes to a file. A commit usually comes with an <strong>commit id</strong> as well as a <strong>commit message</strong> that describes the change.</p></li>
+<li><p><strong>commit log</strong> (aka Git History) - all of the commits (previous changes) to all of the files in your repository</p></li>
+</ul>
+<p><img src="images/commit-log.png" class="img-fluid"> https://github.com/dmil/my-simple-website/commits/master</p>
+</section>
+<section id="history-raw-and-blame-for-any-file" class="level3">
+<h3 class="anchored" data-anchor-id="history-raw-and-blame-for-any-file">History, Raw, and Blame for any file</h3>
+<p><img src="images/screenshot_26.jpg" class="img-fluid"></p>
+<ul>
+<li><strong>Raw</strong> - actual contents of the file without any formatting applied.
+<ul>
+<li>example: https://github.com/fivethirtyeight/chartbuilder-2/blob/master/src/styles/core.scss</li>
+</ul></li>
+<li><strong>History</strong> - every change ever made to that file within this branch.
+<ul>
+<li>example: https://github.com/fivethirtyeight/chartbuilder-2/commits/master/src/styles/core.scss</li>
+</ul></li>
+<li><strong>Blame</strong> - provenance of each line currently in the file you’ree looking at in the branch you’re looking at
+<ul>
+<li>example: https://github.com/fivethirtyeight/chartbuilder-2/blame/master/src/styles/core.scss</li>
+</ul></li>
+</ul>
+</section>
+<section id="branches" class="level3">
+<h3 class="anchored" data-anchor-id="branches">Branches</h3>
+</section>
+<section id="pull-requests" class="level3">
+<h3 class="anchored" data-anchor-id="pull-requests">Pull Requests</h3>
+</section>
+<section id="proposing-edits" class="level3">
+<h3 class="anchored" data-anchor-id="proposing-edits">Proposing Edits</h3>
+<p><img src="images/screenshot_27.jpg" class="img-fluid"></p>
+<p>You can edit a file in GitHub in a new branch, thus proposing a change without actually making the change in the master branch. Just make sure to leave a meaningful description of the change you made in the commit message.</p>
+<p><img src="images/propose-change.png" class="img-fluid"></p>
+</section>
+<section id="drag-and-drop" class="level3">
+<h3 class="anchored" data-anchor-id="drag-and-drop">Drag and Drop</h3>
+<p><img src="images/dragdrop.gif" class="img-fluid"></p>
+</section>
+<section id="collaboration" class="level3">
+<h3 class="anchored" data-anchor-id="collaboration">Collaboration</h3>
+<p>Collaborators can push to the repository without asking your permission, they have full read and write access.</p>
+<p><img src="images/screenshot_23.jpg" class="img-fluid"></p>
+<p>If I wasn’t a collaborator, I could still work with you on an open source project through a process called forking where I can make a copy of your repository in my GitHub account, make changes, and request that you merge them back into your project. We will discuss forking more in depth later.</p>
+</section>
+<section id="serving-up-websites" class="level3">
+<h3 class="anchored" data-anchor-id="serving-up-websites">Serving up Websites!</h3>
+<p>GitHub is also great for serving up static websites. Right now, you have the code for your website on GitHub, but its not being served up anywhere. GitHub is only storing the code. Luckily, if your code happens to be a website, GitHub can also host it for you through a feature called “GitHub Pages”.</p>
+<p>Simply go to the “settings” menu, scroll down to “GitHub Pages”, and select “master branch”</p>
+<p><img src="images/screenshot_24.jpg" class="img-fluid"></p>
+<p>Whatever is in your master branch on GitHub should now appear at</p>
+<pre><code>http://your-username.github.io/repository-name</code></pre>
+<p>in my case it is <a href="http://dmil.github.io/my-simple-website"><strong>http://dmil.github.io/my-simple-website</strong></a></p>
+</section>
+</section>
+<section id="github-for-things-other-than-code" class="level2">
+<h2 class="anchored" data-anchor-id="github-for-things-other-than-code">GitHub for things other than code</h2>
+<ul>
+<li>Auditing system for changes on a file</li>
+<li>For collaboratively editing a text document</li>
+<li><a href="https://github.com/18F/web-design-standards">For drafting government web design standards!</a></li>
+<li>Open <a href="https://github.com/whitehouse/source-code-policy/issues?q=is%3Aissue+is%3Aclosed">comment period</a> for policy</li>
+<li><a href="https://github.com/twitter/innovators-patent-agreement">Drafting</a> and <a href="https://github.com/twitter/innovators-patent-agreement/issues">collaborating on</a> legal documents</li>
+<li>Design (image diff)
+<ul>
+<li>https://help.github.com/articles/rendering-and-diffing-images/</li>
+</ul></li>
+<li>Open journalsim showcase
+<ul>
+<li>https://github.com/showcases/open-journalism</li>
+</ul></li>
+<li>Github for Government
+<ul>
+<li>https://government.github.com/</li>
+<li>https://government.github.com/community/</li>
+</ul></li>
+</ul>
+<p><a href="../../lessons/git_github/git_github.3.html">Next Page (Using Git Locally)</a></p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">© Copyright 2023, Jacob Jameson &amp; Madison Coots</div>   
+  </div>
+</footer>
+
+
+
+</body></html>

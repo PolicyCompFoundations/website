@@ -3,11 +3,13 @@ title: "Computational Foundations for Policy Analysis: Programming and Reproduci
 tbl-colwidths: [5,10,30]
 ---
 
-This page contains an outline of the topics, content, and assignments for the semester. Note that this schedule will be updated as the semester progresses, with all changes documented here.
+*An article about computational science in a scientific publication is not the scholarship itself, it is merely advertising of the scholarship. The actual scholarship is the complete software development environment and the complete set of instructions which generated the figures.* - **J. Buckheit and D. Donoho**
+
+This page contains an outline of the topics, content, and assignments for the course. 
 
 |  Lesson | Topic  | Description  |
 |:------:|--------|--------|
-|  [1](/lessons/git_github.html)  | Git/GitHub  | We will cover Git and GitHub basics from the command line, branching, merging, and forking |
+|  [1](/lessons/git_github/git_github.1.html)  | Git/GitHub  | We will cover Git and GitHub basics from the command line, branching, merging, and forking |
 |  | | |
 |  | | |
 |  | | |
